@@ -1,0 +1,63 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.portfolio'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.2'
+    implementation 'org.springframework.boot:spring-boot-starter-security:2.5.2' // Spring Security
+    implementation 'org.springframework.boot:spring-boot-starter-validation:2.5.2' // Spring Validate
+    implementation 'org.springframework.boot:spring-boot-configuration-processor:2.5.2' // Configuration Processor
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb:2.5.2'// MongoDB
+    
+    implementation 'com.querydsl:querydsl-jpa:4.4.0' // QueryDSL
+    implementation 'io.springfox:springfox-swagger2:2.9.2' // Swagger
+    implementation 'io.springfox:springfox-swagger-ui:2.9.2' // Swagger UI
+    implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16' // Log4j2
+	implementation 'io.jsonwebtoken:jjwt:0.9.1' // JWT
+    implementation 'commons-fileupload:commons-fileupload:1.3.3' // FileUpload
+	implementation 'net.rakugakibox.util:yaml-resource-bundle:1.1' // Yaml Message Resource
+    
+    compileOnly 'org.projectlombok:lombok:1.18.10' // Lombok
+    annotationProcessor 'org.projectlombok:lombok' // Lombok Annotation
+    
+	
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+// QueryDSL Q-File Config
+def generated= "target/generated-sources/java"
+sourceSets {
+	main.java.srcDirs += [ generated ]
+}
+tasks.withType(JavaCompile) {
+	options.annotationProcessorGeneratedSourcesDirectory = file(generated)
+}	
+
+task initSourceFolders {
+    sourceSets*.java.srcDirs*.each {
+        if (!it.exists()) {
+            it.mkdirs()
+        }
+    }
+
+    sourceSets*.resources.srcDirs*.each {
+        if (!it.exists()) {
+            it.mkdirs()
+        }
+    }
+}
+
+test {
+	useJUnitPlatform()
+}

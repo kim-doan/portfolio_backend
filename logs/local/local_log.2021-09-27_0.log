@@ -1,0 +1,163 @@
+INFO  21-09-27 09:04:38[background-preinit] [Version:21] - HV000001: Hibernate Validator 6.2.0.Final
+INFO  21-09-27 09:04:38[main] [PortfolioApplication:55] - Starting PortfolioApplication using Java 1.8.0_261 on DESKTOP-2AS3T25 with PID 30208 (C:\Users\doan0\Documents\workspace-sts-3.9.10.RELEASE\Portfolio\bin\main started by doan0 in C:\Users\doan0\Documents\workspace-sts-3.9.10.RELEASE\Portfolio)
+INFO  21-09-27 09:04:38[main] [PortfolioApplication:663] - The following profiles are active: local
+INFO  21-09-27 09:04:39[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+INFO  21-09-27 09:04:39[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 25 ms. Found 1 MongoDB repository interfaces.
+INFO  21-09-27 09:04:39[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 9111 (http)
+INFO  21-09-27 09:04:39[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-9111"]
+INFO  21-09-27 09:04:39[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-09-27 09:04:39[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+INFO  21-09-27 09:04:39[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-09-27 09:04:39[main] [ServletWebServerApplicationContext:290] - Root WebApplicationContext: initialization completed in 872 ms
+INFO  21-09-27 09:04:39[main] [cluster:71] - Cluster created with settings {hosts=[192.168.10.41:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+INFO  21-09-27 09:04:39[cluster-ClusterId{value='61510a9722778806f121e89c', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:1, serverValue:18}] to 192.168.10.41:27017
+INFO  21-09-27 09:04:39[cluster-rtt-ClusterId{value='61510a9722778806f121e89c', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:2, serverValue:17}] to 192.168.10.41:27017
+INFO  21-09-27 09:04:39[cluster-ClusterId{value='61510a9722778806f121e89c', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=40544600}
+INFO  21-09-27 09:04:40[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-09-27 09:04:40[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/resources/**'] with []
+INFO  21-09-27 09:04:40[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/resources/static/**'] with []
+INFO  21-09-27 09:04:40[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/resources/static/static/**'] with []
+INFO  21-09-27 09:04:40[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/static/js/**'] with []
+INFO  21-09-27 09:04:40[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/static/css/**'] with []
+INFO  21-09-27 09:04:40[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/static/img/**'] with []
+INFO  21-09-27 09:04:40[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='**/swagger-resources/**'] with []
+INFO  21-09-27 09:04:40[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  21-09-27 09:04:40[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  21-09-27 09:04:40[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/webjars/**'] with []
+INFO  21-09-27 09:04:40[main] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c3158e0, org.springframework.security.web.context.SecurityContextPersistenceFilter@6c538eb2, org.springframework.security.web.header.HeaderWriterFilter@6cbb175, org.springframework.security.web.authentication.logout.LogoutFilter@33a8c9c9, com.portfolio.main.jwt.JwtAuthenticationFilter@412ebe64, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@487cd177, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20d19f2c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f731759, org.springframework.security.web.session.SessionManagementFilter@70997a94, org.springframework.security.web.access.ExceptionTranslationFilter@59636c47, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c046c92]
+INFO  21-09-27 09:04:40[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-9111"]
+INFO  21-09-27 09:04:40[main] [TomcatWebServer:220] - Tomcat started on port(s): 9111 (http) with context path ''
+INFO  21-09-27 09:04:40[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-09-27 09:04:40[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-09-27 09:04:40[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-09-27 09:04:40[main] [PortfolioApplication:61] - Started PortfolioApplication in 2.064 seconds (JVM running for 2.457)
+INFO  21-09-27 10:56:05[cluster-ClusterId{value='61510a9722778806f121e89c', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoNodeIsRecoveringException: Command failed with error 11600 (InterruptedAtShutdown): 'interrupted at shutdown' on server 192.168.10.41:27017. The full response is {"ok": 0.0, "errmsg": "interrupted at shutdown", "code": 11600, "codeName": "InterruptedAtShutdown"}
+	at com.mongodb.internal.connection.ProtocolHelper.createSpecialException(ProtocolHelper.java:242)
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:171)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:358)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-09-27 10:56:17[cluster-ClusterId{value='61510a9722778806f121e89c', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+INFO  21-09-27 10:56:37[cluster-rtt-ClusterId{value='61510a9722778806f121e89c', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:6, serverValue:5}] to 192.168.10.41:27017
+INFO  21-09-27 10:56:39[cluster-ClusterId{value='61510a9722778806f121e89c', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:7, serverValue:6}] to 192.168.10.41:27017
+INFO  21-09-27 10:56:39[cluster-ClusterId{value='61510a9722778806f121e89c', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1447400}
+INFO  21-09-27 14:42:23[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-09-27 20:39:13[background-preinit] [Version:21] - HV000001: Hibernate Validator 6.2.0.Final
+INFO  21-09-27 20:39:13[main] [PortfolioApplication:55] - Starting PortfolioApplication using Java 1.8.0_261 on DESKTOP-2AS3T25 with PID 18868 (C:\Users\doan0\Documents\workspace-sts-3.9.10.RELEASE\Portfolio\bin\main started by doan0 in C:\Users\doan0\Documents\workspace-sts-3.9.10.RELEASE\Portfolio)
+INFO  21-09-27 20:39:13[main] [PortfolioApplication:663] - The following profiles are active: local
+INFO  21-09-27 20:39:13[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+INFO  21-09-27 20:39:14[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 27 ms. Found 1 MongoDB repository interfaces.
+INFO  21-09-27 20:39:14[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 9111 (http)
+INFO  21-09-27 20:39:14[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-9111"]
+INFO  21-09-27 20:39:14[main] [StandardService:173] - Starting service [Tomcat]
+INFO  21-09-27 20:39:14[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+INFO  21-09-27 20:39:14[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-09-27 20:39:14[main] [ServletWebServerApplicationContext:290] - Root WebApplicationContext: initialization completed in 922 ms
+INFO  21-09-27 20:39:14[main] [cluster:71] - Cluster created with settings {hosts=[192.168.10.41:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+INFO  21-09-27 20:39:14[cluster-rtt-ClusterId{value='6151ad6242756b1824647651', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:2, serverValue:20}] to 192.168.10.41:27017
+INFO  21-09-27 20:39:14[cluster-ClusterId{value='6151ad6242756b1824647651', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:1, serverValue:19}] to 192.168.10.41:27017
+INFO  21-09-27 20:39:14[cluster-ClusterId{value='6151ad6242756b1824647651', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=39488600}
+INFO  21-09-27 20:39:15[main] [PropertySourcedRequestMappingHandlerMapping:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  21-09-27 20:39:15[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/resources/**'] with []
+INFO  21-09-27 20:39:15[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/resources/static/**'] with []
+INFO  21-09-27 20:39:15[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/resources/static/static/**'] with []
+INFO  21-09-27 20:39:15[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/static/js/**'] with []
+INFO  21-09-27 20:39:15[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/static/css/**'] with []
+INFO  21-09-27 20:39:15[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/static/img/**'] with []
+INFO  21-09-27 20:39:15[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='**/swagger-resources/**'] with []
+INFO  21-09-27 20:39:15[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  21-09-27 20:39:15[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  21-09-27 20:39:15[main] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/webjars/**'] with []
+INFO  21-09-27 20:39:15[main] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d3a1903, org.springframework.security.web.context.SecurityContextPersistenceFilter@70ede57d, org.springframework.security.web.header.HeaderWriterFilter@27b337bb, org.springframework.security.web.authentication.logout.LogoutFilter@30a7653e, com.portfolio.main.jwt.JwtAuthenticationFilter@26582ca, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61f377d1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ccd341d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@153cb763, org.springframework.security.web.session.SessionManagementFilter@65be88ae, org.springframework.security.web.access.ExceptionTranslationFilter@2f054f70, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@587c5c1]
+INFO  21-09-27 20:39:15[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-9111"]
+INFO  21-09-27 20:39:15[main] [TomcatWebServer:220] - Tomcat started on port(s): 9111 (http) with context path ''
+INFO  21-09-27 20:39:15[main] [DocumentationPluginsBootstrapper:160] - Context refreshed
+INFO  21-09-27 20:39:15[main] [DocumentationPluginsBootstrapper:163] - Found 1 custom documentation plugin(s)
+INFO  21-09-27 20:39:15[main] [ApiListingReferenceScanner:41] - Scanning for api listing references
+INFO  21-09-27 20:39:15[main] [PortfolioApplication:61] - Started PortfolioApplication in 2.155 seconds (JVM running for 2.565)
+INFO  21-09-27 20:39:24[http-nio-9111-exec-2] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-09-27 20:39:24[http-nio-9111-exec-2] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-09-27 20:39:24[http-nio-9111-exec-2] [DispatcherServlet:547] - Completed initialization in 0 ms
+DEBUG 21-09-27 20:39:24[http-nio-9111-exec-2] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+INFO  21-09-27 20:39:24[http-nio-9111-exec-2] [connection:71] - Opened connection [connectionId{localValue:3, serverValue:21}] to 192.168.10.41:27017
+DEBUG 21-09-27 20:41:33[http-nio-9111-exec-5] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 20:41:33[http-nio-9111-exec-5] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 20:54:57[http-nio-9111-exec-1] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:02:59[http-nio-9111-exec-4] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:04:12[http-nio-9111-exec-6] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:06:31[http-nio-9111-exec-9] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:06:31[http-nio-9111-exec-1] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:06:31[http-nio-9111-exec-1] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:07:02[http-nio-9111-exec-2] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:07:03[http-nio-9111-exec-3] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:07:03[http-nio-9111-exec-3] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:13:23[http-nio-9111-exec-5] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:13:23[http-nio-9111-exec-6] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:13:23[http-nio-9111-exec-6] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:14:37[http-nio-9111-exec-8] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:14:38[http-nio-9111-exec-9] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:14:38[http-nio-9111-exec-9] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:17:29[http-nio-9111-exec-2] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:17:29[http-nio-9111-exec-4] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:17:29[http-nio-9111-exec-4] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:32:03[http-nio-9111-exec-7] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:32:03[http-nio-9111-exec-9] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:32:03[http-nio-9111-exec-9] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:32:51[http-nio-9111-exec-10] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:32:52[http-nio-9111-exec-1] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:32:52[http-nio-9111-exec-1] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:34:35[http-nio-9111-exec-4] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:34:35[http-nio-9111-exec-6] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:34:35[http-nio-9111-exec-6] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:35:45[http-nio-9111-exec-8] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:35:45[http-nio-9111-exec-8] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:35:52[http-nio-9111-exec-9] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:35:52[http-nio-9111-exec-10] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:35:52[http-nio-9111-exec-10] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:35:56[http-nio-9111-exec-1] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:35:56[http-nio-9111-exec-1] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:36:04[http-nio-9111-exec-2] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:36:04[http-nio-9111-exec-2] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:36:33[http-nio-9111-exec-3] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:36:33[http-nio-9111-exec-3] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:36:46[http-nio-9111-exec-4] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:36:46[http-nio-9111-exec-4] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:38:15[http-nio-9111-exec-6] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:38:15[http-nio-9111-exec-6] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:38:22[http-nio-9111-exec-7] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:38:22[http-nio-9111-exec-8] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:38:22[http-nio-9111-exec-8] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:38:26[http-nio-9111-exec-9] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:38:26[http-nio-9111-exec-9] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:39:02[http-nio-9111-exec-10] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:39:02[http-nio-9111-exec-10] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:40:32[http-nio-9111-exec-2] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:40:32[http-nio-9111-exec-2] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:40:37[http-nio-9111-exec-3] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:40:37[http-nio-9111-exec-3] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:43:49[http-nio-9111-exec-5] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:43:49[http-nio-9111-exec-5] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:43:58[http-nio-9111-exec-6] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user
+DEBUG 21-09-27 21:43:58[http-nio-9111-exec-6] [MongoTemplate:2563] - find using query: { "userId" : "admin"} fields: Document{{}} for class: class com.portfolio.main.user.model.User in collection: user

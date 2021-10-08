@@ -1,4 +1,4 @@
-INFO  21-09-29 06:21:36[cluster-ClusterId{value='6152d8deb2ca8b4f02889463', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+INFO  21-10-08 04:11:18[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
 com.mongodb.MongoSocketReadException: Prematurely reached end of stream
 	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
 	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
@@ -9,7 +9,7 @@ com.mongodb.MongoSocketReadException: Prematurely reached end of stream
 	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
 	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
 	at java.lang.Thread.run(Unknown Source)
-INFO  21-09-29 06:21:38[cluster-ClusterId{value='6152d8deb2ca8b4f02889463', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+INFO  21-10-08 04:11:20[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
 com.mongodb.MongoSocketOpenException: Exception opening socket
 	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
 	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143)
@@ -29,19 +29,35 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
 	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
 	... 4 common frames omitted
-INFO  21-09-29 06:22:00[cluster-ClusterId{value='6152d8deb2ca8b4f02889463', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:15, serverValue:1}] to 192.168.10.41:27017
-INFO  21-09-29 06:22:00[cluster-ClusterId{value='6152d8deb2ca8b4f02889463', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=931500}
-INFO  21-09-29 06:22:08[cluster-rtt-ClusterId{value='6152d8deb2ca8b4f02889463', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:16, serverValue:7}] to 192.168.10.41:27017
-INFO  21-09-29 09:31:10[cluster-ClusterId{value='6152d8deb2ca8b4f02889463', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
-com.mongodb.MongoNodeIsRecoveringException: Command failed with error 11600 (InterruptedAtShutdown): 'interrupted at shutdown' on server 192.168.10.41:27017. The full response is {"ok": 0.0, "errmsg": "interrupted at shutdown", "code": 11600, "codeName": "InterruptedAtShutdown"}
-	at com.mongodb.internal.connection.ProtocolHelper.createSpecialException(ProtocolHelper.java:242)
-	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:171)
-	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:358)
+INFO  21-10-08 04:11:50[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:18, serverValue:5}] to 192.168.10.41:27017
+INFO  21-10-08 04:11:54[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:19, serverValue:6}] to 192.168.10.41:27017
+INFO  21-10-08 04:11:54[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1284900}
+INFO  21-10-08 07:17:54[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
 	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
 	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
 	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
 	at java.lang.Thread.run(Unknown Source)
-INFO  21-09-29 09:31:22[cluster-ClusterId{value='6152d8deb2ca8b4f02889463', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+INFO  21-10-08 07:17:56[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:20, serverValue:1}] to 192.168.10.41:27017
+INFO  21-10-08 07:17:56[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1129900}
+INFO  21-10-08 07:17:59[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:21, serverValue:4}] to 192.168.10.41:27017
+INFO  21-10-08 07:18:56[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 07:18:58[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
 com.mongodb.MongoSocketOpenException: Exception opening socket
 	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
 	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143)
@@ -61,8 +77,274 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
 	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
 	... 4 common frames omitted
-INFO  21-09-29 09:31:45[cluster-ClusterId{value='6152d8deb2ca8b4f02889463', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:21, serverValue:7}] to 192.168.10.41:27017
-INFO  21-09-29 09:31:45[cluster-ClusterId{value='6152d8deb2ca8b4f02889463', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1102200}
-INFO  21-09-29 09:31:52[cluster-rtt-ClusterId{value='6152d8deb2ca8b4f02889463', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:22, serverValue:9}] to 192.168.10.41:27017
-INFO  21-09-29 14:46:56[http-nio-9111-exec-9] [Cookie:173] - A cookie header was received [37.4375268; _gid=GA1.1.1839116724.1632881326] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.
+INFO  21-10-08 07:19:08[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:23, serverValue:7}] to 192.168.10.41:27017
+INFO  21-10-08 07:19:08[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1005500}
+INFO  21-10-08 07:19:09[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:24, serverValue:9}] to 192.168.10.41:27017
+INFO  21-10-08 07:20:08[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 07:20:09[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:25, serverValue:1}] to 192.168.10.41:27017
+INFO  21-10-08 07:20:09[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=784300}
+INFO  21-10-08 07:20:19[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:26, serverValue:5}] to 192.168.10.41:27017
+INFO  21-10-08 07:21:09[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 07:21:18[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:27, serverValue:3}] to 192.168.10.41:27017
+INFO  21-10-08 07:21:18[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=874300}
+INFO  21-10-08 07:21:19[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:28, serverValue:5}] to 192.168.10.41:27017
+INFO  21-10-08 07:22:18[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 07:22:18[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:29, serverValue:1}] to 192.168.10.41:27017
+INFO  21-10-08 07:22:18[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=797300}
+INFO  21-10-08 07:22:29[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:30, serverValue:5}] to 192.168.10.41:27017
+INFO  21-10-08 08:47:23[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 08:47:23[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:31, serverValue:1}] to 192.168.10.41:27017
+INFO  21-10-08 08:47:23[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1081100}
+INFO  21-10-08 08:47:33[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:32, serverValue:7}] to 192.168.10.41:27017
+INFO  21-10-08 08:48:23[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 08:48:25[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+INFO  21-10-08 08:48:33[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:34, serverValue:5}] to 192.168.10.41:27017
+INFO  21-10-08 08:48:35[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:35, serverValue:6}] to 192.168.10.41:27017
+INFO  21-10-08 08:48:35[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=879400}
+INFO  21-10-08 08:49:35[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 08:49:35[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:36, serverValue:1}] to 192.168.10.41:27017
+INFO  21-10-08 08:49:35[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1037800}
+INFO  21-10-08 08:49:43[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:37, serverValue:7}] to 192.168.10.41:27017
+INFO  21-10-08 08:50:35[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 08:50:43[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+INFO  21-10-08 08:50:53[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:39, serverValue:3}] to 192.168.10.41:27017
+INFO  21-10-08 08:50:53[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=906900}
+INFO  21-10-08 08:50:53[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:40, serverValue:5}] to 192.168.10.41:27017
+INFO  21-10-08 08:51:53[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 08:51:53[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:41, serverValue:1}] to 192.168.10.41:27017
+INFO  21-10-08 08:51:53[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=826200}
+INFO  21-10-08 08:52:04[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:42, serverValue:7}] to 192.168.10.41:27017
+INFO  21-10-08 08:52:53[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 08:52:53[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:43, serverValue:2}] to 192.168.10.41:27017
+INFO  21-10-08 08:52:53[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=790500}
+INFO  21-10-08 08:53:04[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:44, serverValue:10}] to 192.168.10.41:27017
+INFO  21-10-08 08:53:53[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 08:53:53[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:45, serverValue:1}] to 192.168.10.41:27017
+INFO  21-10-08 08:53:53[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=850700}
+INFO  21-10-08 08:54:04[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:46, serverValue:7}] to 192.168.10.41:27017
+INFO  21-10-08 08:54:53[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 08:54:55[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:47, serverValue:4}] to 192.168.10.41:27017
+INFO  21-10-08 08:54:55[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=962500}
+INFO  21-10-08 08:55:04[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:48, serverValue:11}] to 192.168.10.41:27017
+INFO  21-10-08 08:55:55[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 08:55:57[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:49, serverValue:2}] to 192.168.10.41:27017
+INFO  21-10-08 08:55:57[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=741200}
+INFO  21-10-08 08:56:14[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:50, serverValue:7}] to 192.168.10.41:27017
+INFO  21-10-08 08:56:57[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 08:56:58[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:51, serverValue:1}] to 192.168.10.41:27017
+INFO  21-10-08 08:56:58[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1043300}
+INFO  21-10-08 08:57:14[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:52, serverValue:9}] to 192.168.10.41:27017
+INFO  21-10-08 08:57:58[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 08:58:00[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:53, serverValue:5}] to 192.168.10.41:27017
+INFO  21-10-08 08:58:00[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=723600}
+INFO  21-10-08 08:58:14[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:54, serverValue:7}] to 192.168.10.41:27017
+INFO  21-10-08 08:59:01[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 08:59:02[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:55, serverValue:8}] to 192.168.10.41:27017
+INFO  21-10-08 08:59:02[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=839200}
+INFO  21-10-08 08:59:14[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:56, serverValue:9}] to 192.168.10.41:27017
+INFO  21-10-08 09:00:02[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:76] - Exception in monitor thread while connecting to server 192.168.10.41:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:304)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:218)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Unknown Source)
+INFO  21-10-08 09:00:04[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:57, serverValue:1}] to 192.168.10.41:27017
+INFO  21-10-08 09:00:04[cluster-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [cluster:71] - Monitor thread successfully connected to server with description ServerDescription{address=192.168.10.41:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=970400}
+INFO  21-10-08 09:00:14[cluster-rtt-ClusterId{value='615ec5c8f42c5d00c7e4f16e', description='null'}-192.168.10.41:27017] [connection:71] - Opened connection [connectionId{localValue:58, serverValue:7}] to 192.168.10.41:27017
+INFO  21-10-08 09:00:51[RMI TCP Connection(2)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-10-08 09:00:51[RMI TCP Connection(2)-127.0.0.1] [connection:71] - Closed connection [connectionId{localValue:12, serverValue:8}] to 192.168.10.41:27017 because there was a socket exception raised on another connection from this pool.
+INFO  21-10-08 09:00:51[RMI TCP Connection(2)-127.0.0.1] [connection:71] - Opened connection [connectionId{localValue:59, serverValue:9}] to 192.168.10.41:27017
+INFO  21-10-08 09:00:51[RMI TCP Connection(2)-127.0.0.1] [connection:71] - Closed connection [connectionId{localValue:59, serverValue:9}] to 192.168.10.41:27017 because the pool has been closed.

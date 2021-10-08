@@ -1,6 +1,7 @@
 package com.portfolio.main.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.portfolio.main.exception.CSignUpFailException;
 import com.portfolio.main.response.model.CommonResult;
 import com.portfolio.main.response.model.LoginResult;
+import com.portfolio.main.response.model.PageListResult;
 import com.portfolio.main.response.model.SingleResult;
 import com.portfolio.main.response.service.ResponseService;
 import com.portfolio.main.user.model.User;
@@ -32,6 +34,12 @@ public class UserController {
 	
 	@Autowired
 	private UserService userService;
+	
+	@CrossOrigin
+	@GetMapping("/userAll")
+	private PageListResult<User> getUserAll(final Pageable pageable) {
+		return responseService.getPageListResult(User.class, userService.getUserAll(pageable));
+	}
 	
 	@CrossOrigin
 	@GetMapping("/userInfo")

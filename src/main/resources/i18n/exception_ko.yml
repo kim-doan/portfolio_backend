@@ -22,3 +22,9 @@ authenticationEntryPointException:
 accessDeniedException:
   code: "E0008"
   msg: "접근할 수 없는 권한입니다."
+aboutNotFoundException:
+  code: "E0009"
+  msg: "소개 정보를 찾아올 수 없습니다."
+aboutSaveException:
+  code: "E0010"
+  msg: "소개 정보 저장에 실패했습니다."

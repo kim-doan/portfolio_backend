@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.AccessDeniedException;
 
+import com.portfolio.main.exception.CAboutNotFoundException;
+import com.portfolio.main.exception.CAboutSaveException;
 import com.portfolio.main.exception.CAuthenticationEntryPointException;
 import com.portfolio.main.exception.CLoginFailureException;
 import com.portfolio.main.exception.CPasswordIncorrectException;
@@ -42,47 +44,59 @@ public class ExceptionAdvice {
 	protected CommonResult defaultException(HttpServletRequest request, Exception e) {
 		return responseService.getFailResult("E0001", getMessage("unKnown.msg"));
 	}
-	
-	//유저 정보 조회 실패
+
+	// 유저 정보 조회 실패
 	@ExceptionHandler(CUserNotFoundException.class)
 	protected CommonResult userNotFoundException(HttpServletRequest request, CUserNotFoundException e) {
 		return responseService.getFailResult("E0002", getMessage("userNotFoundException.msg"));
 	}
-	
-	//유저 정보 중복
+
+	// 유저 정보 중복
 	@ExceptionHandler(CUserDuplicateException.class)
 	protected CommonResult userDuplicateException(HttpServletRequest request, CUserDuplicateException e) {
 		return responseService.getFailResult("E0003", getMessage("userDuplicateException.msg"));
 	}
-	
-	//회원가입 실패
+
+	// 회원가입 실패
 	@ExceptionHandler(CSignUpFailException.class)
 	protected CommonResult signUpFailException(HttpServletRequest request, CSignUpFailException e) {
 		return responseService.getFailResult("E0004", getMessage("signUpFailException.msg"));
 	}
-	
-	//비밀번호 틀림
+
+	// 비밀번호 틀림
 	@ExceptionHandler(CPasswordIncorrectException.class)
 	protected CommonResult passwordIncorrectException(HttpServletRequest request, CPasswordIncorrectException e) {
 		return responseService.getFailResult("E0005", getMessage("passwordIncorrectException.msg"));
 	}
 
-	//로그인 실패
+	// 로그인 실패
 	@ExceptionHandler(CLoginFailureException.class)
 	protected CommonResult loginFailureException(HttpServletRequest request, CLoginFailureException e) {
 		return responseService.getFailResult("E0006", getMessage("loginFailureException.msg"));
 	}
-	
-	//토큰 만료 및 없을 경우 오류 처리
+
+	// 토큰 만료 및 없을 경우 오류 처리
 	@ExceptionHandler(CAuthenticationEntryPointException.class)
-	public CommonResult authenticationEntryPointException(HttpServletRequest request, CAuthenticationEntryPointException e) {
+	public CommonResult authenticationEntryPointException(HttpServletRequest request,
+			CAuthenticationEntryPointException e) {
 		return responseService.getFailResult("E0007", getMessage("authenticationEntryPointException.msg"));
 	}
 
-	//토큰 권한 오류
+	// 토큰 권한 오류
 	@ExceptionHandler(AccessDeniedException.class)
 	public CommonResult accessDeniedException(HttpServletRequest request, AccessDeniedException e) {
 		return responseService.getFailResult("E0008", getMessage("accessDeniedException.msg"));
 	}
-	
+
+	// 소개 정보 조회 실패
+	@ExceptionHandler(CAboutNotFoundException.class)
+	public CommonResult aboutNotFoundException(HttpServletRequest request, CAboutNotFoundException e) {
+		return responseService.getFailResult("E0009", getMessage("aboutNotFoundException.msg"));
+	}
+
+	// 소개 정보 저장 실패
+	@ExceptionHandler(CAboutSaveException.class)
+	public CommonResult aboutSaveException(HttpServletRequest request, CAboutSaveException e) {
+		return responseService.getFailResult("E0010", getMessage("aboutSaveException.msg"));
+	}
 }

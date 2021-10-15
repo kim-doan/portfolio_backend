@@ -35,7 +35,7 @@ public class AboutController {
 	}
 	
 	@CrossOrigin
-	@PostMapping("/aboutInfo")
+	@PostMapping("/aboutInfo/save")
 	private CommonResult setAbout(@RequestBody(required = true) About about) {
 		boolean result = aboutService.setAbout(about);
 		

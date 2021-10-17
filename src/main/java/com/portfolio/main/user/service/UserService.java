@@ -8,6 +8,8 @@ import java.util.Optional;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,6 +37,15 @@ public class UserService {
 	@Autowired
 	private JwtTokenProvider jwtTokenProvider;
 
+	/**
+	 * 유저정보 전체 조회 (페이지네이션)
+	 * @param pageable
+	 * @return
+	 */
+	public Page<User> getUserAll(Pageable pageable) {
+		return userRepository.findAll(pageable);
+	}
+	
 	/**
 	 * 유저아이디로 유저정보 단건 조회
 	 * 

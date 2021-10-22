@@ -1,10 +1,10 @@
 spring:
   data:
     mongodb:
-      host: 127.0.0.1
-      port: 17017
-      username: admin
-      password: admin
+      host: 192.168.10.41
+      port: 27017
+      username: 3view
+      password: 3view
       database: Test
       authentication-database: admin
   messages:

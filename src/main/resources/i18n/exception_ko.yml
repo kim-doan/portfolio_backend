@@ -28,3 +28,6 @@ aboutNotFoundException:
 aboutSaveException:
   code: "E0010"
   msg: "소개 정보 저장에 실패했습니다."
+boardSaveException:
+  code: "E0010"
+  msg: "게시글 저장에 실패했습니다."

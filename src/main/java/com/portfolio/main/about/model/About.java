@@ -28,4 +28,6 @@ public class About {
 	private List<AboutDetail> careerList = new ArrayList<AboutDetail>();
 	
 	private List<AboutDetail> projectList = new ArrayList<AboutDetail>();
+	
+	private List<TechStack> stackList = new ArrayList<TechStack>();
 }

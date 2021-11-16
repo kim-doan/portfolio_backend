@@ -13,6 +13,7 @@ import org.springframework.security.access.AccessDeniedException;
 import com.portfolio.main.exception.CAboutNotFoundException;
 import com.portfolio.main.exception.CAboutSaveException;
 import com.portfolio.main.exception.CAuthenticationEntryPointException;
+import com.portfolio.main.exception.CBoardDetailNotFoundException;
 import com.portfolio.main.exception.CBoardSaveException;
 import com.portfolio.main.exception.CLoginFailureException;
 import com.portfolio.main.exception.CPasswordIncorrectException;
@@ -106,4 +107,11 @@ public class ExceptionAdvice {
 	public CommonResult boardSaveException(HttpServletRequest request, CBoardSaveException e) {
 		return responseService.getFailResult("E0011", getMessage("boardSaveException.msg"));
 	}
+	
+	// 게시판 상세정보 조회 실패
+	@ExceptionHandler(CBoardDetailNotFoundException.class)
+	public CommonResult boardDetailNotFoundException(HttpServletRequest request, CBoardDetailNotFoundException e) {
+		return responseService.getFailResult("E0012", getMessage("boardDetailNotFoundException.msg"));
+	}
+	
 }

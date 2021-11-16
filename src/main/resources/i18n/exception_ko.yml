@@ -29,5 +29,9 @@ aboutSaveException:
   code: "E0010"
   msg: "소개 정보 저장에 실패했습니다."
 boardSaveException:
-  code: "E0010"
+  code: "E0011"
   msg: "게시글 저장에 실패했습니다."
+boardDetailNotFoundException:
+  code: "E0012"
+  msg: "게시글 정보를 찾을 수 없습니다."
+  

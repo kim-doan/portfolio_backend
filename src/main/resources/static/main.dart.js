@@ -107758,7 +107758,7 @@ mu(){var s=0,r=P.F(t.OD),q,p=2,o,n=[],m,l,k,j,i,h
 var $async$mu=P.B(function(a,b){if(a===1){o=b
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return P.A(G.agv(P.hX("http://192.168.10.68:9111/api/aboutInfo",0,null),null),$async$mu)
+return P.A(G.agv(P.hX("/api/aboutInfo",0,null),null),$async$mu)
 case 7:m=b
 if(m.b===200){l=C.aq.dK(0,m.x)
 k=C.aJ.nf(0,l,null)
@@ -107791,7 +107791,7 @@ Ck(a){return this.acs(a)},
 acs(a){var s=0,r=P.F(t.a0),q,p=2,o,n=[],m,l,k,j,i,h,g
 var $async$Ck=P.B(function(b,c){if(b===1){o=c
 s=p}while(true)switch(s){case 0:p=4
-j=P.hX("http://192.168.10.68:9111/api/aboutInfo/save",0,null)
+j=P.hX("/api/aboutInfo/save",0,null)
 i=t.N
 i=P.X(["content-type","application/json","accept","application/json"],i,i)
 s=7
@@ -107825,7 +107825,7 @@ aaF(a){var s=0,r=P.F(t.KC),q,p=2,o,n=[],m,l,k,j,i,h
 var $async$kO=P.B(function(b,c){if(b===1){o=c
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return P.A(G.agv(P.hX("http://192.168.10.68:9111/api/board/page?page="+C.e.j(a.a)+"&size="+C.e.j(a.b),0,null),null),$async$kO)
+return P.A(G.agv(P.hX("/api/board/page?page="+C.e.j(a.a)+"&size="+C.e.j(a.b),0,null),null),$async$kO)
 case 7:m=c
 if(m.b===200){l=C.aq.dK(0,m.x)
 k=C.aJ.nf(0,l,null)
@@ -107855,7 +107855,7 @@ aaD(a){var s=0,r=P.F(t.Nb),q,p=2,o,n=[],m,l,k,j,i,h
 var $async$mv=P.B(function(b,c){if(b===1){o=c
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return P.A(G.agv(P.hX("http://192.168.10.68:9111/api/board?boardId="+a,0,null),null),$async$mv)
+return P.A(G.agv(P.hX("/api/board?boardId="+a,0,null),null),$async$mv)
 case 7:m=c
 if(m.b===200){l=C.aq.dK(0,m.x)
 k=C.aJ.nf(0,l,null)
@@ -107880,7 +107880,7 @@ Cl(a){return this.act(a)},
 act(a){var s=0,r=P.F(t.a0),q,p=2,o,n=[],m,l,k,j,i,h,g
 var $async$Cl=P.B(function(b,c){if(b===1){o=c
 s=p}while(true)switch(s){case 0:p=4
-j=P.hX("http://192.168.10.68:9111/api/board/save",0,null)
+j=P.hX("/api/board/save",0,null)
 i=t.N
 i=P.X(["content-type","application/json","accept","application/json"],i,i)
 s=7
@@ -107913,7 +107913,7 @@ GV(a){return this.aJF(a)},
 aJF(a){var s=0,r=P.F(t.CF),q,p=2,o,n=[],m,l,k,j,i,h,g,f
 var $async$GV=P.B(function(b,c){if(b===1){o=c
 s=p}while(true)switch(s){case 0:p=4
-j=P.hX("http://192.168.10.68:9111/api/signIn",0,null)
+j=P.hX("/api/signIn",0,null)
 i=t.N
 i=P.X(["content-type","application/json","accept","application/json"],i,i)
 s=7
@@ -107950,7 +107950,7 @@ var $async$nP=P.B(function(b,c){if(b===1){o=c
 s=p}while(true)switch(s){case 0:p=4
 j=t.N
 s=7
-return P.A(G.agv(P.hX("http://192.168.10.68:9111/api/profile",0,null),P.X(["X-AUTH-TOKEN",a],j,j)),$async$nP)
+return P.A(G.agv(P.hX("/api/profile",0,null),P.X(["X-AUTH-TOKEN",a],j,j)),$async$nP)
 case 7:m=c
 if(m.b===200){l=C.aq.dK(0,m.x)
 if(J.by(l)===0){q=null
@@ -107979,7 +107979,7 @@ p1(a,b){return this.aMv(0,b)},
 aMv(a,b){var s=0,r=P.F(t.a0),q,p=2,o,n=[],m,l,k,j,i,h,g
 var $async$p1=P.B(function(c,d){if(c===1){o=d
 s=p}while(true)switch(s){case 0:p=4
-j=P.hX("http://192.168.10.68:9111/api/signUp",0,null)
+j=P.hX("/api/signUp",0,null)
 i=t.N
 i=P.X(["content-type","application/json","accept","application/json"],i,i)
 s=7
@@ -108012,7 +108012,7 @@ aby(a){var s=0,r=P.F(t.yc),q,p=2,o,n=[],m,l,k,j,i,h
 var $async$nV=P.B(function(b,c){if(b===1){o=c
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return P.A(G.agv(P.hX("http://192.168.10.68:9111/api/userAll?page="+C.e.j(a.a)+"&size="+C.e.j(a.b),0,null),null),$async$nV)
+return P.A(G.agv(P.hX("/api/userAll?page="+C.e.j(a.a)+"&size="+C.e.j(a.b),0,null),null),$async$nV)
 case 7:m=c
 if(m.b===200){l=C.aq.dK(0,m.x)
 k=C.aJ.nf(0,l,null)

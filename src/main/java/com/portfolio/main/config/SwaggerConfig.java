@@ -10,7 +10,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@Profile({"local"}) // ¹èÆ÷»óÅÂ¿¡¼­´Â º¼ ¼ö ¾øµµ·Ï ·ÎÄÃ È¯°æ¿¡¼­¸¸ ¼³Á¤
+@Profile({"local"}) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È¯ï¿½æ¿¡ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
@@ -18,8 +18,8 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.any()) // ÇöÀç RequestMappingÀ¸·Î ÇÒ´çµÈ ¸ðµç URL ¸®½ºÆ®¸¦ ÃßÃâ
-                .paths(PathSelectors.ant("/api/**")) // ±×Áß /api/** ÀÎ URLµé¸¸ ÇÊÅÍ¸µ
+                .apis(RequestHandlerSelectors.any()) // ï¿½ï¿½ï¿½ï¿½ RequestMappingï¿½ï¿½ï¿½ï¿½ ï¿½Ò´ï¿½ï¿½ ï¿½ï¿½ï¿½ URL ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+                .paths(PathSelectors.ant("/api/**")) // ï¿½ï¿½ï¿½ï¿½ /api/** ï¿½ï¿½ URLï¿½é¸¸ ï¿½ï¿½ï¿½Í¸ï¿½
                 .build();
     }
 }

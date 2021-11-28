@@ -21,21 +21,21 @@ import net.rakugakibox.util.YamlResourceBundle;
 @Configuration
 public class MessageConfiguration implements WebMvcConfigurer {
 
-	@Bean // ¼¼¼Ç¿¡ Áö¿ª ¼³Á¤. 
+	@Bean // ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. 
 	public LocaleResolver localeResolver() {
 		SessionLocaleResolver slr = new SessionLocaleResolver();
 		slr.setDefaultLocale(Locale.KOREAN);
 		return slr;
 	}
 	
-	@Bean // Áö¿ª¼³Á¤À» º¯°æÇÏ´Â ÀÎÅÍ³Ý ¿äÃ»½Ã ÆÄ¶ó¹ÌÅÍ¿¡ lang Á¤º¸¸¦ ÀúÀåÇÏ¸é ¾ð¾î°¡ º¯°æµÊ
+	@Bean // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Í³ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ä¶ï¿½ï¿½ï¿½Í¿ï¿½ lang ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½î°¡ ï¿½ï¿½ï¿½ï¿½ï¿½
 	public LocaleChangeInterceptor localeChangeInterceptor() {
 		LocaleChangeInterceptor lci = new LocaleChangeInterceptor();
 		lci.setParamName("lang");
 		return lci;
 	}
 	
-	@Override // ÀÎÅÍ¼ÁÅÍ¸¦ ½Ã½ºÅÛ ·¹Áö½ºÆ®¸®¿¡ µî·Ï
+	@Override // ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Í¸ï¿½ ï¿½Ã½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	public void addInterceptors(InterceptorRegistry registry) {
 		
 		registry.addInterceptor(localeChangeInterceptor());
